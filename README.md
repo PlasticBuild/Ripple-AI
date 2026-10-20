@@ -11,4 +11,4 @@ Ripple is a privacy-focused Android assistant that brings on-device and online A
 - **Tools inside the conversation:** work with documents and files through the assistant.
 - **Your privacy choices:** control online sharing, browsing, and private chats.
 
-This repository is the planned home for public Android downloads and patch notes. No public release is available yet.
+Download [Ripple Build 63](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc143). Download releases contain the APK only. The [available source snapshot, licenses and rebuild notes](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc143) are published separately.
