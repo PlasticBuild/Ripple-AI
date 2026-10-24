@@ -11,6 +11,10 @@ Ripple is a privacy-focused Android assistant that brings on-device and online A
 - **Tools inside the conversation:** work with documents and files through the assistant.
 - **Your privacy choices:** control online sharing, browsing, and private chats.
 
-Download [Ripple Build 63 preview (vc145)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc145). Download releases contain the APK only. The [available source snapshot, licenses and rebuild notes](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc145) are published separately.
+Download the latest published [Ripple Build 63 preview (vc145)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc145), or browse [all releases](https://github.com/PlasticBuild/Ripple-AI/releases). APK download releases contain the APK only. Matching public source archives, licenses and rebuild notes are indexed on the [corresponding-source branch](https://github.com/PlasticBuild/Ripple-AI/tree/corresponding-source).
 
-The vc145 preview adds a saved Thinking default, optional reply following and bounded composer controls. It passed host build checks and nine model-free emulator UI tests. Phone behavior, model quality/speed and new NPU performance remain unqualified. Read BUILD63-CHAT.md inside the matching source archive for these changes.
+The vc145 preview adds a saved Thinking default, optional reply following and bounded composer controls. It passed host build checks and nine model-free emulator UI tests. Its original phone, quality, speed and NPU qualification limitations remain unchanged.
+
+The automatic updater skips prereleases. Its latest eligible stable baseline remains [Build 61 (vc138)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build61-vc138); it does not offer a downgrade to installations already on a newer version. Source-only releases are prereleases without APK assets and are excluded from that feed.
+
+Development status — October 24, 2026: private app development has continued through vc160 with host checks. A separate NPU161 standalone host investigation is underway. No newer APK is published here, and this update does not claim new physical acceptance, all-model NPU support or NPU performance. Source migration changes repository organization, not the validation scope of the published APKs.
