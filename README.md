@@ -1,16 +1,17 @@
-<p align="center">
-  <img src="https://github.com/PlasticBuild.png?size=256" alt="Ripple logo" width="128" height="128">
-</p>
+# Ripple corresponding source
 
-# Ripple AI
+This branch indexes the source packages already published for Ripple Build 63 previews vc143, vc144 and vc145. Relocating these identical files is repository maintenance and adds no build, phone, NPU, performance or native source-equivalence claim.
 
-Ripple is a privacy-focused Android assistant that brings on-device and online AI together in one conversation. Chat, explore what is on your screen, extract and translate text, and use integrated tools, with control over your models, data, and online access.
+The APK download releases in this repository retain their APK-only attachments. Corresponding source uses separate `source-build63-vc...` releases, marked as prereleases so they are excluded from the app's normal update feed.
 
-- **Chat your way:** use local models or choose an online assistant.
-- **Work with your screen:** select an area, copy text, translate, and ask questions about what you see.
-- **Tools inside the conversation:** work with documents and files through the assistant.
-- **Your privacy choices:** control online sharing, browsing, and private chats.
+The three new source releases are currently being prepared as **drafts**. Until migration is reviewed and the drafts are published, use the existing public source links below:
 
-Download [Ripple Build 63 preview (vc145)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc145). Download releases contain the APK only. The [available source snapshot, licenses and rebuild notes](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc145) are published separately.
+| APK preview | Existing source | New source location after migration |
+| --- | --- | --- |
+| [vc143 APK](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc143) | [vc143 source](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc143) | [source-build63-vc143](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc143) |
+| [vc144 APK](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc144) | [vc144 source](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc144) | [source-build63-vc144](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc144) |
+| [vc145 APK](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc145) | [vc145 source](https://github.com/PlasticBuild/Ripple-AI-public-source/releases/tag/build63-vc145) | [source-build63-vc145](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc145) |
 
-The vc145 preview adds a saved Thinking default, optional reply following and bounded composer controls. It passed host build checks and nine model-free emulator UI tests. Phone behavior, model quality/speed and new NPU performance remain unqualified. Read BUILD63-CHAT.md inside the matching source archive for these changes.
+Each source package has its original archive and manifest; the original published validation/evidence files accompany it. Extract the complete archive, retain the licenses/notices and follow its rebuild instructions. Signing keys, credentials, APKs and private phone evidence are excluded from the source migration.
+
+The original packages state their native rebuild/equivalence limitations. Those limitations remain unchanged. Later private work and experimental NPU161 work are not included here.
