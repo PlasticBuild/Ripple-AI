@@ -1,7 +1,10 @@
-# Matching Build63 vc161 source
+# Ripple corresponding source
 
-Complete corresponding source and notices: https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc161
+- [Current Build 64 source (vc167): complete archive, manifest, validation and evidence](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build64-vc167).
+- [Current Build 64 APK (vc167)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build64-vc167).
+- [Previous Build 63 source (vc161)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc161).
+- [All releases](https://github.com/PlasticBuild/Ripple-AI/releases).
 
-The complete release archive includes both archive-only Git omissions: the Firefox source tarball and the x86_64 debug inference library.
+This branch links the full source archive rather than mirroring the application source here. The archive contains source/recovery files, build recipes, third-party notices and the two documented archive-only entries identified in the source manifest.
 
-App: https://github.com/PlasticBuild/Ripple-AI/releases/tag/build63-vc161
+The validation summary separates 145 focused host tests, 4 earlier unchanged background tests using a synthetic provider, and limited phone checks. Physical background notification/partial preservation remains unverified after a no-text Lumo timeout. See the validation and evidence summaries for the remaining scope and build-provenance limits.
