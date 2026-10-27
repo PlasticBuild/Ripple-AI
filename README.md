@@ -1,31 +1,69 @@
-# Ripple — Build 64
+# Ripple — Build 65
 
-Ripple combines on-device and online chat with screen selection, OCR, translation and optional capture tools.
+- [APK download release](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build65-vc179).
+- [Corresponding source and validation](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build65-vc179).
 
-## Download and source
+### Google AI
 
-- [Build 64 APK (vc167)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build64-vc167) — stable APK download release.
-- [Matching complete source archive, manifest and validation](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build64-vc167) — separate source release.
-- [All releases](https://github.com/PlasticBuild/Ripple-AI/releases) · [Previous Build 63 source (vc161)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc161).
+- Add Google AI to main chat and Assistant mode.
+- Send a photo through Google AI’s chat attachment control and keep the conversation for follow-up messages.
+- Keep the original Circle to Search selection visible above the Google conversation.
+- Resolve photo requests such as “another one” from the Google conversation instead of searching those words literally.
+- Recognize corrected photo requests and follow-up answers to photo clarification questions.
+- Fix Google photo cards being rejected because image and publisher IDs differ or hidden feedback fields are present.
+- Try Google Images when returned page previews cannot load, while keeping results attached to the correct reply.
 
-The APK updates the existing owner-signed Ripple installation in place. Optional chat models and the formula model are installed separately through their setup controls; downloading a tool is an explicit choice.
+### Duck.ai
 
-## Changes in Build 64
+- Add Duck.ai to main chat, Assistant mode and Circle to Search.
+- Choose among six website model choices under one Duck.ai agent.
+- Send text and a single photo when the selected model supports image uploads.
+- Keep model selection separate from agent selection.
+- Send messages directly from Ripple without opening a website popup.
+- Duck.ai keeps the selected model through follow-up messages and reads the newest answer without confusing it with earlier replies.
+- Keep completed Duck.ai capture conversations ready when switching agents, without re-uploading the original image or resending earlier messages.
 
-- When Google AI has no usable photo cards, fetch explicitly named photos from Google Images separately from the selected screenshot and earlier chat. Show the source; Stop cancels pending work.
-- Update the existing Google reply as it grows. Add Find, jump-to-bottom and New chat controls, and keep the Google AI label readable in both themes.
-- Separate capture agent/model controls, aligned header actions, OCR inspection and reviewed table export with blank-cell preservation.
-- Optional local formula-to-LaTeX recognition with explicit model download/removal.
-- Supported reply continuation after reported output limits; interrupted-response recovery keeps queues held for review.
-- Opt-in Sassy/Rambler modes, Brave AI naming with legacy preferences retained, and retired active SearxNG choices.
-- Keep manual memory tools off by default. Avoid temporary duplicate copies in photo transfers, saved chats and backups without trimming content. Explicit backend choices stay intact; manual idle release may require reloading the model for the next answer.
+### Circle to Search
 
-## Validation and limits
+- Wait for older chats to finish saving before switching agents; keep the visible chat during background preparation.
+- Keep the original Circle to Search selection and unsent draft when starting a new chat.
 
-- 145 focused host tests across 12 classes passed. Four earlier background-preservation tests passed on code unchanged in vc167; these are separate synthetic-provider tests.
-- In-place owner-signed install/normal launch passed. One phone showed lion/DDR4 Google reference cards, readable label contrast and one natural busy-queue dispatch.
-- A separate Lumo 500-fact request reached the bounded 120-second timeout without visible partial text. Physical response-notification Stop/partial preservation remains unverified; no partial-loss or service defect was established.
-- Earlier checks covered table review, Ghost draft/keyboard preservation, one formula setup/equation, capture controls and Local reference photos; their scope is recorded in the validation summary.
-- No measured RAM/speed benefit, new NPU qualification or adaptive native-context allocation is claimed. Local backend eligibility and resource checks still apply.
+### Automatic Copy text
 
-See the source release’s validation and evidence summaries for the test scope and known limits. Retain the bundled component licenses and notices.
+- Circle or drag across an area to select equations and multiple table columns.
+- Recognize likely equations automatically with the installed local formula reader, including separated exponents and symbols.
+- Use repeated column alignment when nearby table headings would otherwise merge.
+- Copy uncertain content as ordinary text; never substitute rejected OCR fragments as verified values.
+- Leave the clipboard unchanged when formula reading fails and there is no accepted text to copy.
+
+### Capture toolbar
+
+- Keep the activation and live capture toolbars consistent.
+- Hide optional advanced capture tools by default; enable them in Dev settings.
+
+### Settings
+
+- Update default settings for new installations; preserve existing saved choices.
+- Add a reusable settings profile export under About → Backup and restore.
+- Keep credentials, chats, account sessions and private device state out of release-default profiles.
+
+### Release validation verified
+
+- vc179 host checks: 235 tests across 29 suites; no failures, errors or skipped tests.
+- vc179 phone update: in-place installation and normal launch passed, preserving the existing app installation.
+- vc179 Circle to Search: Google-to-Duck Continue and a real follow-up retained the synthetic conversation context.
+- vc179 regression fixed: after visiting Google and returning to the existing Duck.ai chat, the previously failing request completed with WRITING COMPLETE, without Retry or the visible-text error.
+- vc179 testing cleanup: synthetic test chat and crop removed; original app state restored and the phone session closed.
+- Retained vc178 evidence: two native capture New chat resets kept the original crop and unsent draft. These checks were not repeated on vc179; cursor position is covered by host tests.
+- Retained vc178 evidence: an active main-chat Duck.ai request completed through Home and launcher return. This does not establish visible partial-token streaming or Circle to Search task re-entry.
+- Retained vc177 evidence: Google New chat completed twice and one queued Duck.ai message was delivered once. These unchanged paths also have current host coverage.
+- Complete source archive: integrity test, fresh extraction and file-hash verification passed; signing secrets and raw phone captures are excluded.
+- This release adds no new NPU qualification or measured RAM/speed result; it does not claim every model/provider was physically retested.
+- GitHub release publication and updater verification are checked separately from these local validation results.
+
+### Files
+
+- APK: `Ripple-Build65-vc179-r1.apk` — 319,802,876 bytes; SHA-256 `aa4242f24faa91dd382965f74e9cb035b678e9494dd42ce90e1ac6f06037b295`.
+- Corresponding source: `Ripple-Build65-vc179-source.7z` — 1,006,116,931 bytes; SHA-256 `af529c59d527c0cc1122c0a5e2098583fb2655d2955332ab35c5028e251e037c`.
+- [Source manifest](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build65-vc179/Ripple-Build65-vc179-source-manifest.json).
+- [Validation record](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build65-vc179/Ripple-Build65-vc179-validation.json) and [evidence summary](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build65-vc179/Ripple-Build65-vc179-evidence.json).
