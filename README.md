@@ -1,10 +1,22 @@
 # Ripple corresponding source
 
-- [Current Build 64 source (vc167): complete archive, manifest, validation and evidence](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build64-vc167).
-- [Current Build 64 APK (vc167)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build64-vc167).
+- [Build 65 source (vc179): complete archive, manifest, validation and evidence](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build65-vc179).
+- [Build 65 APK (vc179)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build65-vc179).
+- [Previous Build 64 source (vc167)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build64-vc167).
 - [Previous Build 63 source (vc161)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build63-vc161).
 - [All releases](https://github.com/PlasticBuild/Ripple-AI/releases).
 
-This branch links the full source archive rather than mirroring the application source here. The archive contains source/recovery files, build recipes, third-party notices and the two documented archive-only entries identified in the source manifest.
+## Build 65 source
 
-The validation summary separates 145 focused host tests, 4 earlier unchanged background tests using a synthetic provider, and limited phone checks. Physical background notification/partial preservation remains unverified after a no-text Lumo timeout. See the validation and evidence summaries for the remaining scope and build-provenance limits.
+- Complete archive: 4,508 files, including recovery scripts, build recipes, third-party source and licenses.
+- Archive size: 1,006,116,931 bytes.
+- Archive SHA256: `af529c59d527c0cc1122c0a5e2098583fb2655d2955332ab35c5028e251e037c`.
+- All archived files passed integrity and fresh-extraction hash checks.
+- The app download release contains only the APK; corresponding source is supplied in the separate source release in this repository.
+
+## Validation scope
+
+- vc179: 235 focused host tests across 29 suites passed.
+- vc179: in-place phone update, normal launch and the Google-to-Duck Continue/switch-back regression passed.
+- Earlier unchanged checks cover capture New chat/draft preservation, queue delivery and an active main-chat request through Home and launcher return.
+- No new NPU, RAM or speed benchmark is claimed; the validation summary distinguishes current and inherited evidence.
