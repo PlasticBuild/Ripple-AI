@@ -1,16 +1,33 @@
-# Ripple — Build 66
+# Ripple — Build 67
 
-- [Download Build 66 (vc188)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build66-vc188).
-- [Corresponding source, build recipes, licenses and validation](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build66-vc188).
-- The stable app release contains only the APK. The separate source prerelease is excluded from app updates.
+- [Download the stable Build 67 APK (vc192)](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build67-vc192).
+- [Corresponding source, build recipes, licenses and validation](https://github.com/PlasticBuild/Ripple-AI/releases/tag/source-build67-vc192).
+- The stable app release contains only the APK. The separate source prerelease is excluded from Latest and app updates.
+
+### New in Build 67
+
+- Zoom and pan captured screens with two fingers in Circle to Search, Copy text and Translate; keep text boxes and selections aligned.
+- Swipe toolbars and selection bubbles between top and bottom with a smooth slide. Keep their position when switching tools on the same capture; respect reduced-motion settings.
+- Read curved text lines in their original order, including numbers beneath barcodes.
+- Keep Google AI photo context, display contextual reference photos and deliver queued follow-ups.
+- Retain Google reply text when background page animations pause; remove empty formatting artifacts and obsolete timeout warnings when delayed replies arrive.
+- Use neutral Google visual-search prompts while preserving custom prompts. Keep held messages available for explicit review.
+- Choose source languages per text region on mixed-language captures.
+- Cancel an attachment import with Stop while retaining the unsent draft.
+
+### Optional Find on screen preview
+
+- Describe an item with LOCUS-2B and review its proposed selection before using it. Some crops include surrounding content.
+- Run the full model locally with Ripple's native CPU runtime; this optional feature is a preview within the stable app release.
+- Download about 7.76 GB directly from pinned Hugging Face revisions. No API key is needed; these model weights are not bundled in the APK or source archive.
+- Require at least 6 GiB of available memory. Release idle chat memory before loading local vision, and retire the vision worker after completion or cancellation.
+- Further LOCUS crop-accuracy work and NPU integration are planned for Build 68; no LOCUS NPU acceleration or speed-up is claimed here.
 
 ### Known limitations
 
-- Google AI can remain at Preparing or report verification/consent required. Photo requests and queued messages may not complete. The verification recovery fix and remaining Google photo, list-spacing and queue checks are scheduled for Build 67.
-- Local vision can omit objects. The focused Hexagon test missed one object in its initial description, although its count follow-up was correct.
-- LOCUS is not yet usable for live inference. Native Android LOCUS integration is the main goal for Build 67.
+- Google may require its own verification or consent. Website availability and provider responses can vary.
+- Local vision and OCR can omit or misread content; review proposed selections and extracted text.
 - Public SearXNG support is configurable and off by default; no public JSON-enabled server has passed release qualification.
-- Region OCR can misread or omit characters; compare the captured text and correct it when needed.
 - No all-model accuracy, general NPU speed increase, or measured RAM/latency improvement is claimed.
 
 ### AI connections and chat
@@ -50,19 +67,21 @@
 
 ### Verified scope
 
-- 1,387 host tests across 168 suites passed without failures, errors or skipped tests.
-- 11 production Google DOM fixtures passed. The separate Build 67 verification fix is not included in this APK.
-- Release build, signing and 16 KiB alignment checks passed. Lint retains 736 warnings and six hints.
-- Android instrumentation code compiled; device instrumentation was not executed.
-- In-place vc188 installation and normal launch passed. The focused phone session observed unfolded activation and the Photos picker.
-- Automatic-selected CPU and explicit Hexagon returned correct synthetic count follow-ups; their differing outputs and warm/cold states do not support a general speed comparison.
-- Google crop handoff was observed, but Google reply/photo delivery and queue completion remained blocked. Repeat-photo and list-spacing checks were not run.
-- Automatic compute was restored and identified synthetic test material was cleaned up.
-- The complete source archive passed integrity, fresh-extraction and file-hash verification. Signing secrets and raw phone evidence are excluded.
+- Release lint, build, original signing certificate and 16 KiB alignment checks passed.
+- Focused host runs passed: 72 focused animation, capture and release-catalog checks, 70 Google reply/prompt cases and 119 swipe/capture cases. These are separate scoped runs, not a combined full-suite claim.
+- Phone acceptance covers 18 scoped cases: final vc192 installation, visible intermediate animation frames, zoom and cleanup, plus explicitly reviewed unchanged vc190/vc191 Google and LOCUS checks.
+- Google contextual photos, queued follow-ups and background reply retention were observed. Production LOCUS setup, preview, cancellation and return to chat were observed.
+- LOCUS final outputs agreed with the pinned Python reference on controlled cases; the stricter intermediate-tensor comparison remains failed. Agreement does not establish crop accuracy or performance.
+- Reduced motion has focused host coverage; no separate physical reduced-motion setting test is claimed. Android instrumentation compiled; compiled-only cases are not reported as executed.
+- Complete source integrity, fresh extraction and every archived file hash passed. Signing secrets, private photos and raw phone evidence are excluded.
 
 ### Files
 
-- APK: `Ripple-Build66-vc188-r1.apk` — 286,830,076 bytes; SHA-256 `d153930ff35d2d258ba7035d6b3d1ee8ed6cfe8814c6d3e0b9d9a50e5b19814b`.
-- Source: `Ripple-Build66-vc188-source.7z` — 981,786,833 bytes; SHA-256 `92ccd9bc0281b7dc0e4fa8e01cfe83d8435eaf7e586768022aa9593e84c9c4fd`.
-- [Source manifest](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build66-vc188/Ripple-Build66-vc188-source-manifest.json).
-- [Validation record](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build66-vc188/Ripple-Build66-vc188-validation.json) and [evidence summary](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build66-vc188/Ripple-Build66-vc188-evidence.json).
+- APK: `Ripple-Build67-vc192-r1.apk` — 292,843,416 bytes; SHA-256 `8d04f54b1d67bb54bdc274f7b50feddf0b9fd27bc74968bb557de9a2073ea24a`.
+- Source: `Ripple-Build67-vc192-source.7z` — 982,056,740 bytes; SHA-256 `830e3a9a397fc171a10c427000451cda1da460fb460e650a53924c5fd2e6e2e9`.
+- [Source manifest](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build67-vc192/Ripple-Build67-vc192-source-manifest.json).
+- [Validation record](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build67-vc192/Ripple-Build67-vc192-validation.json) and [evidence summary](https://github.com/PlasticBuild/Ripple-AI/releases/download/source-build67-vc192/Ripple-Build67-vc192-evidence.json).
+
+### Previous release
+
+- [Build 66 / vc188 release](https://github.com/PlasticBuild/Ripple-AI/releases/tag/build66-vc188) and [its README and validation scope](https://github.com/PlasticBuild/Ripple-AI/blob/712a13faeaab974540130e90225acd5f2ca6c527/README.md).
